@@ -163,7 +163,9 @@ DIALOGUE1<-function(rA,main,param){
   samples<-unlist(lapply(cell.types, function(x) rownames(X[[x]])))
   samplesU<-get.abundant(samples,n1)
   if(length(samplesU)<1){
-    stop("Cannot run DIALOGUE with less than 5 samples.")
+    #stop("Cannot run DIALOGUE with less than 5 samples.")
+    print("Sample count is ")
+    print(length(samplesU))
   }
   
   # Centering and scaling (optional)
